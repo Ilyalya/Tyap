@@ -1,0 +1,59 @@
+typedef int bbb[10];
+typedef bbb ccc[10];
+
+typedef int vector[11];
+
+int main(){
+    int xx = 100000000000;
+    lint yy;
+
+    yy = xx;
+    xx = xx * yy;
+    yy = yy ;
+    print(yy);
+    print(xx);
+    ccc a;
+
+    for(int i=0; i<10; i+=1)
+        for(int j=0; j<10;j+=1)
+            a[i][j]=i+j;
+
+    for(int i=0;i<10;i++)
+        print(a[i]);
+
+
+        vector A;
+        vector B;
+        vector C;
+        int carry = 0;
+
+        for (int j = 0 ; j <= 9; j++) {
+
+        int length = 10;
+
+        for (int i = 0; i < length; i++) {
+          A[i] = 2;
+          B[i] = j;
+        }
+
+
+        for (int i = 0; i < length; i++) {
+            int rez = A[i] + B[i] + carry;
+            C[i] = rez % 10;
+            carry = rez / 10;
+        }
+
+        //if (carry) C[length++] = carry;
+
+        for (int j = 0; carry > 0; ){
+
+        C[length++] = carry;
+        break;
+        }
+
+        //print(C);
+    }
+
+
+}
+
