@@ -1,5 +1,6 @@
 from syntaxAnalizer import *
 from triadeGenerator import get_triade
+import scaner
 
 class Interpreter(object):
     def __init__(self, file):
